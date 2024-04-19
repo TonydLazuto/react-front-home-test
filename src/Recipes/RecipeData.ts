@@ -35,7 +35,6 @@ import {
   vegan,
   winter,
   italian,
-  spring
 } from "../Tags/TagData";
 
 const pavlova: RecipeType = {

@@ -1,6 +1,6 @@
 import { TagType } from "../Tags/TagType";
-import { allRecipes } from "./RecipeData";
-import { RecipeType } from "./RecipeType";
+import { allRecipes } from "../Recipes/RecipeData";
+import { RecipeType } from "../Recipes/RecipeType";
 import { tagList } from "../Tags/TagData";
 
 export const summerRecipes: RecipeType[] = allRecipes.filter((recipe) => {
