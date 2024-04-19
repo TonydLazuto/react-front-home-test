@@ -6,7 +6,13 @@ type FilterListButtonsProps = {
 
 export const FilterListButtons = ({ filterList, setFilter } :FilterListButtonsProps) => {
     return (
-      <div>
+      <div style={{
+        margin: "10px",
+        padding: "5px",
+        borderRadius: "3px",
+        display: "flex",
+        justifyContent: "space-between",
+      }}>
         {filterList.map((filter) => (
           <button key={filter} onClick={() => setFilter(filter)}>
             {filter}

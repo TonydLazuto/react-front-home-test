@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./styles.css";
 import { TagList } from "./Tagfilter/ListeDesTags";
 import { tagList } from "./Tags/TagData";
@@ -7,12 +7,15 @@ import { FilteredRecipeList } from "./Filters/FilteredRecipeList";
 
 const App = () => {
   const [filter, setFilter] = useState<string>("all");
+  const [filterTags, setFilterTags] = useState<string[]>([]);
   const filterList = ["chocolate", "sugar", "summer", "dessert", "chocolate dessert", "eggs free", "autumn", "vegan"];
   return (
     <div className="App">
       Liste des recettes
-      <TagList tags={tagList} />
-      <FilterListButtons filterList={filterList} setFilter={setFilter} />
+      <div style={{ margin : 'auto', width: "50%" }}>
+        <TagList tags={tagList} setFilterTags={setFilterTags} />
+        <FilterListButtons filterList={filterList} setFilter={setFilter} />
+      </div>
       <FilteredRecipeList filter={filter} />
     </div>
   );
