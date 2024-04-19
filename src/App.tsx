@@ -15,7 +15,7 @@ import {
 import { TagList } from "./Tagfilter/ListeDesTags";
 import { tagList } from "./Tags/TagData";
 
-export default function App() {
+const App = () => {
   const [filter, setFilter] = useState<string>("all");
   return (
     <div className="App">
@@ -45,3 +45,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

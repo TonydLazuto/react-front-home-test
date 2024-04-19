@@ -1,16 +1,18 @@
 {
   "name": "test-de-recrutement-reactjs",
+  "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-scripts": "4.0.3"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
-    "@types/react": "17.0.20",
+    "@types/react": "18.2.79",
     "@types/react-dom": "^18.0.5",
     "typescript": "4.4.2"
   },
