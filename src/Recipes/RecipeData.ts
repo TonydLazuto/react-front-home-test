@@ -14,12 +14,17 @@ import {
   salad,
   cucumber,
   feta,
+  pasta,
+  guanciale,
+  permeggiano,
+  pepper
 } from "../Ingredients/IngredientData";
 
 import {
   stepsFondantChocolat,
   stepsPavlova,
   stepsTarteAuxPoires,
+  stepsCarbonara
 } from "../Steps/StepData";
 
 import {
@@ -29,6 +34,8 @@ import {
   summer,
   vegan,
   winter,
+  italian,
+  spring
 } from "../Tags/TagData";
 
 const pavlova: RecipeType = {
@@ -98,11 +105,32 @@ const waldorfSalad: RecipeType = {
   tags: [appetizer, summer, vegan],
 };
 
+const carbonara: RecipeType = {
+  nom: "Pâtes carbonara",
+  description: "Carbonara est un plat de pâtes italien",
+  imageURL:
+    "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/0346a29a89ef229b1a0ff9697184f944/Derivates/cb5051204f4a4525c8b013c16418ae2904e737b7.jpg",
+  etapes: stepsCarbonara,
+  ingredients: [pasta, guanciale, egg, permeggiano, pepper],
+  ingredientsWithQuantity: [
+    { ingredient: pasta, quantity: 350 },
+    {
+      ingredient: guanciale,
+      quantity: 150,
+    },
+    { ingredient: egg, quantity: 3, unit: "g" },
+    { ingredient: permeggiano, quantity: 50, unit: "g" },
+    { ingredient: pepper, quantity: 1, unit: "g" },
+  ],
+  tags: [italian],
+};
+
 export const allRecipes: ListOfRecipes = [
   pavlova,
   fondantChocolat,
   pearPie,
   waldorfSalad,
+  carbonara
 ];
 
 export const summerRecipes = allRecipes.filter((recipe) => {

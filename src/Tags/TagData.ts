@@ -60,6 +60,26 @@ export const winter: TagType = {
   color: "blue",
 };
 
+export const italian: TagType = {
+  id: "italian",
+  name: {
+    fr: "italien",
+    en: "italian",
+  },
+  type: "origin",
+  color: "darkgreen",
+};
+
+export const spring: TagType = {
+  id: "spring",
+  name: {
+    fr: "printemps",
+    en: "spring",
+  },
+  type: "saison",
+  color: "green",
+};
+
 export const tagList: TagType[] = [
   summer,
   winter,
@@ -67,4 +87,6 @@ export const tagList: TagType[] = [
   appetizer,
   autumn,
   vegan,
+  italian,
+  spring
 ];

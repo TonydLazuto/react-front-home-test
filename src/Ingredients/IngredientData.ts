@@ -71,3 +71,23 @@ export const cucumber: IngredientType = {
   type: "vegetables",
   unit: "unit",
 };
+
+export const pasta: IngredientType = {
+  name: "pâtes",
+  unit: "g",
+};
+
+export const guanciale: IngredientType = {
+  name: "lardons",
+  unit: "g",
+};
+
+export const permeggiano: IngredientType = {
+  name: "parmesan",
+  unit: "g",
+};
+
+export const pepper: IngredientType = {
+  name: "parmesan",
+  unit: "g",
+};
