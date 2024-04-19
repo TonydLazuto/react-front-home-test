@@ -1,19 +1,19 @@
 import { useState } from "react";
 import "./styles.css";
 import Recipes from "./Recipes/Recipes";
+import { allRecipes } from "./Recipes/RecipeData";
+import { TagList } from "./Tagfilter/ListeDesTags";
+import { tagList } from "./Tags/TagData";
 import {
-  allRecipes,
-  sugarRecipes,
   summerRecipes,
   dessertRecipes,
+  chocolateDessertRecipes,
   noEggsRecipes,
   chocolateRecipes,
   autumnRecipes,
   veganRecipes,
-  chocolateDessertRecipes,
-} from "./Recipes/RecipeData";
-import { TagList } from "./Tagfilter/ListeDesTags";
-import { tagList } from "./Tags/TagData";
+  sugarRecipes,
+} from "./Recipes/FilteredRecipeData";
 
 const App = () => {
   const [filter, setFilter] = useState<string>("all");
