@@ -7,7 +7,7 @@ export type RecipeType = {
   nom: string;
   description: string;
   imageURL: string;
-  ingredients?: IngredientType[];
+  ingredients: IngredientType[];
   etapes?: StepType[];
   ingredientsWithQuantity: IngredientWithQuantityType[];
   tags: TagType[];

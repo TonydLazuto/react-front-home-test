@@ -1,13 +1,13 @@
 import { IngredientType } from "./IngredientType";
 
 export const chocolate: IngredientType = {
-  name: "chocolat",
+  name: "chocolate",
   unit: "kg",
   prefix: "de",
 };
 
 export const sugar: IngredientType = {
-  name: "sucre",
+  name: "sugar",
   unit: "kg",
   prefix: "de",
 };

@@ -13,16 +13,6 @@ export const dessertRecipes: RecipeType[] = allRecipes.filter((recette) => {
   return tags.includes("dessert");
 });
 
-export const chocolateDessertRecipes: RecipeType[] = allRecipes.filter((recette) => {
-  const tagsString: string[] = recette.tags.map((tag) => tag.id);
-  const ingredientString: string[] = recette.ingredients
-    ? recette.ingredients.map((ingredient) => ingredient.name)
-    : [];
-  return (
-    tagsString.includes("dessert") && ingredientString.includes("chocolat")
-  );
-});
-
 export const autumnRecipes: RecipeType[] = allRecipes.filter((recette) => {
   const tagIds = recette.tags.map((tag) => tag.id);
   return tagIds.includes("autumn");
@@ -31,6 +21,17 @@ export const autumnRecipes: RecipeType[] = allRecipes.filter((recette) => {
 export const veganRecipes: RecipeType[] = allRecipes.filter((recette) => {
   const tagIds: string[] = recette.tags.map((tag) => tag.id);
   return tagIds.includes("vegan");
+});
+
+// TODO: demande une gestion différente des filtres par ingredients
+export const chocolateDessertRecipes: RecipeType[] = allRecipes.filter((recette) => {
+  const tagsString: string[] = recette.tags.map((tag) => tag.id);
+  const ingredientString: string[] = recette.ingredients
+    ? recette.ingredients.map((ingredient) => ingredient.name)
+    : [];
+  return (
+    tagsString.includes("dessert") && ingredientString.includes("chocolat")
+  );
 });
 
 export const sugarRecipes: RecipeType[] = allRecipes.filter((recette) => {

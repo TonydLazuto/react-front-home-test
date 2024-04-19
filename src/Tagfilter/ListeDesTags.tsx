@@ -2,13 +2,19 @@ import { Tags } from "../Tags/Tags";
 import { TagType } from "../Tags/TagType";
 import { tagList } from "../Tags/TagData";
 
-type FilterListButtonsProps = {
-  filterList: string[];
-  setFilter: (filter: string) => void
+export const TagList = ({ tags, filter, filterTags, setFilterTags }: {
+  tags: TagType[],
+  filter: string,
+  filterTags: string[],
   setFilterTags: (filter: string[]) => void
-};
-
-export const TagList = ({ tags, setFilterTags }: { tags: TagType[], setFilterTags: (filter: string[]) => void }) => {
+}) => {
+  const handleClick = (tag: string) => {
+    if (filterTags.includes(tag)) {
+      setFilterTags(filterTags.filter((t) => t !== tag));
+    } else {
+      setFilterTags([...filterTags, tag]);
+    }
+  };
   return (
     <div
       style={{
@@ -30,6 +36,7 @@ export const TagList = ({ tags, setFilterTags }: { tags: TagType[], setFilterTag
             justifyContent: "center",
             backgroundColor: `${tag.color}`,
           }}
+          onClick={() => handleClick(tag.name.fr)}
         >
           {tag.name.fr}
         </button>
